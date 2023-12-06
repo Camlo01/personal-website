@@ -49,7 +49,7 @@
 
 .menu.active {
     display: block;
-    background-color: var(--gray);
+    background-color: var(--banner-color);
 }
 
 .menu ul {
