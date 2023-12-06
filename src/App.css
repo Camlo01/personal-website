@@ -1,11 +1,12 @@
 * {
     margin: 0;
     padding: 0;
-    color: #C596FF;
 }
 
 :root {
-    --gray: rgba(21 21 22);
+    --banner-color: rgba(21 21 22);
+    --white: rgba(246 249 255);
+    --text-color: rgb(66, 84, 117);
     --complementary-color: #C596FF;
 }
 
@@ -13,6 +14,7 @@ html {
     font-size: 62.5%;
     font-family: "DM Sans", sans-serif;
     height: 2500px;
+    background-color: var(--white);
 }
 
 .header {
@@ -95,4 +97,120 @@ html {
         font-size: 3.5rem;
     }
 
+}
+
+/* About Section */
+
+.about {
+    padding: 60px 0;
+}
+
+.about__container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    padding: 0 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about__container div {
+    height: 100%;
+}
+
+.about__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.about__body h2 {
+    font-size: 3.3rem;
+    color: var(--complementary-color);
+    font-weight: 700;
+}
+
+.about__body p {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin: 20px 0 0;
+    padding-bottom: 10px;
+    line-height: 2.4rem;
+    text-align: start;
+}
+
+.about__photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.about__photo h2 {
+    width: 100%;
+    font-size: 2.3rem;
+    padding-bottom: 18px;
+}
+
+.about__photo p {
+    width: fit-content;
+    font-size: 1.8rem;
+    color: var(--complementary-color);
+}
+
+.about__photo img {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background-color: gray;
+    margin-top: 30px;
+}
+
+@media (min-width: 458px) {
+    .about__container {
+        padding: 0 45px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .about__photo {
+        padding: 0 40px;
+    }
+
+    .about__photo h2 {
+        font-size: 2.3rem;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .about__container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .about__container>div {
+        max-width: 370px;
+    }
+
+    .about__body h2 {
+        font-size: 5.3rem;
+    }
+
+    .about__photo h2 {
+        font-size: 3.1rem;
+    }
+
+}
+
+/* Features */
+
+.features {
+    height: 540px;
+    width: 100%;
+    background-color: var(--banner-color);
 }
