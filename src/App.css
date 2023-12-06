@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #C596FF;
+}
+
+:root {
+    --gray: rgba(21 21 22);
+    --complementary-color: #C596FF;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "DM Sans", sans-serif;
+    height: 2500px;
+}
+
+.header {
+    height: 480px;
+    display: flexbox;
+    background-image: url(../photos/portada.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header__body {
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 90px;
+}
+
+.header__body h1 {
+    font-size: 8rem;
+    max-width: 340px;
+    margin: 0 auto;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.header__body p {
+    font-size: 3rem;
+    color: var(--complementary-color);
+    padding-bottom: 20px;
+}
+
+.header__social {
+    width: fit-content;
+    display: flex;
+    margin: 20px auto 0;
+}
+
+.header__social-container {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+@media (min-width: 550px) {
+
+    .header {
+        height: 510px;
+    }
+
+    .header__body {
+        padding-top: 100px;
+    }
+
+}
+
+@media (min-width: 820px) {
+
+    .header__body {
+        padding-top: 110px;
+    }
+
+    .header>div:last-child {
+        margin-right: 20px;
+        margin-top: -100px;
+    }
+
+    .header__social {
+        flex-direction: column;
+    }
+
+    .header__body h1 {
+        font-size: 9.5rem;
+        padding-bottom: 40px;
+    }
+
+    .header__body p {
+        font-size: 3.5rem;
+    }
+
+}
