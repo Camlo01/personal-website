@@ -6,5 +6,10 @@
     "navMenuItem5": "Contact",
     "navMenuItem6": "Change Languaje",
     "header__body-h1": "Camilo Beltrán",
-    "header__body-p": "Software Developer"
+    "header__body-p": "Software Developer",
+    "about__body-h2": "I code, \ntherefore I am.",
+    "about__body-p1": "I am a young enthusiast who is keen on IT and anything about it since my first steps to High School. During the past few years, I gained lots of experience in this field due to the strong desire of becoming an expert. Today I am a senior front-end developer at one of the leading companies in the world.",
+    "about__body-p2": "\"For me, web development is more than coding. It's a canvas with a blank page and I am the artist to paint it with colors of coding\"",
+    "about__photo-h2": "Located en Colombia",
+    "about__photo-p": "Boyacá"
 }
