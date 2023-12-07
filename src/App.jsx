@@ -44,9 +44,38 @@ function About() {
 }
 
 function Features() {
+
+  const { t } = useTranslation(["main"])
   return (
     <section className="features">
-      {/* Content for features section */}
+      <div className="features__container">
+
+        <div className="features__card">
+          <img src="" alt="" />
+          <h2>{t('feature_title_1')}</h2>
+          <p>{t('feature_body_1')}</p>
+          <div className="feature__card-link">
+            <a>{t('feature_learn-more')}</a>
+          </div>
+        </div>
+        <div className="features__card">
+          <img src="" alt="" />
+          <h2>{t('feature_title_2')}</h2>
+          <p>{t('feature_body_2')}</p>
+          <div className="feature__card-link">
+            <a>{t('feature_learn-more')}</a>
+          </div>
+        </div>
+        <div className="features__card">
+          <img src="" alt="" />
+          <h2>{t('feature_title_3')}</h2>
+          <p>{t('feature_body_3')}</p>
+          <div className="feature__card-link">
+            <a>{t('feature_learn-more')}</a>
+          </div>
+        </div>
+
+      </div>
     </section>
   )
 }
