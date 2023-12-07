@@ -52,28 +52,67 @@ function Features() {
 
         <div className="features__card">
           <img src="" alt="" />
-          <h2>{t('feature_title_1')}</h2>
-          <p>{t('feature_body_1')}</p>
+          <h2>{t('feature__title_1')}</h2>
+          <p>{t('feature__body_1')}</p>
           <div className="feature__card-link">
-            <a>{t('feature_learn-more')}</a>
+            <a>{t('feature__learn-more')}</a>
           </div>
         </div>
         <div className="features__card">
           <img src="" alt="" />
-          <h2>{t('feature_title_2')}</h2>
-          <p>{t('feature_body_2')}</p>
+          <h2>{t('feature__title_2')}</h2>
+          <p>{t('feature__body_2')}</p>
           <div className="feature__card-link">
-            <a>{t('feature_learn-more')}</a>
+            <a>{t('feature__learn-more')}</a>
           </div>
         </div>
         <div className="features__card">
           <img src="" alt="" />
-          <h2>{t('feature_title_3')}</h2>
-          <p>{t('feature_body_3')}</p>
+          <h2>{t('feature__title_3')}</h2>
+          <p>{t('feature__body_3')}</p>
           <div className="feature__card-link">
-            <a>{t('feature_learn-more')}</a>
+            <a>{t('feature__learn-more')}</a>
           </div>
         </div>
+
+      </div>
+    </section>
+  )
+}
+
+function Skills() {
+
+  const { t } = useTranslation(["main"])
+  return (
+    <section className="skills">
+      <div className="skills__container">
+
+        <div className="skills__body">
+          <h2>{t('skills__body-title')}</h2>
+          <p>{t('skills__body-text')}</p>
+        </div>
+
+        <div className="skills__skills">
+
+          <div className="skill__card">
+            <h2>Java</h2>
+            <p>Spring Boot</p>
+          </div>
+          <div className="skill__card">
+            <h2>JS</h2>
+            <p>React JS</p>
+          </div>
+          <div className="skill__card">
+            <h2>Desing</h2>
+            <p>HTML5 y CSS3</p>
+          </div>
+          <div className="skill__card">
+            <h2>SQL</h2>
+            <p>Databases</p>
+          </div>
+
+        </div>
+
 
       </div>
     </section>
@@ -86,6 +125,7 @@ function App() {
       <Header />
       <About />
       <Features />
+      <Skills />
     </>
   )
 }

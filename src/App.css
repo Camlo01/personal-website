@@ -14,7 +14,6 @@
 html {
     font-size: 62.5%;
     font-family: "DM Sans", sans-serif;
-    height: 2500px;
     background-color: var(--white);
 }
 
@@ -35,7 +34,7 @@ html {
 }
 
 .header__body h1 {
-    font-size: 8rem;
+    font-size: 7rem;
     max-width: 340px;
     margin: 0 auto;
     color: white;
@@ -43,7 +42,7 @@ html {
 }
 
 .header__body p {
-    font-size: 3rem;
+    font-size: 2.7rem;
     color: var(--complementary-color);
     padding-bottom: 20px;
 }
@@ -211,7 +210,7 @@ html {
 /* Features */
 
 .features {
-    padding: 30px 0 60px;
+    padding: 80px 0;
     width: 100%;
     background-color: var(--banner-color);
     display: flex;
@@ -219,7 +218,7 @@ html {
 
 .features__container {
     padding: 0 20px;
-    margin: 0 auto;
+    margin: -60px auto 0;
     display: flex;
     flex-direction: column;
     max-width: 1400px;
@@ -281,10 +280,127 @@ html {
     }
 }
 
-@media (min-width:260px) {
+@media (min-width:1260px) {
 
     .features__card {
         margin: 60px 40px 0;
     }
 
+}
+
+/* Skills */
+
+.skills {
+    padding: 60px 0;
+    width: 100%;
+    background-color: var(--white);
+}
+
+.skills__container {
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+}
+
+@media (min-width: 459px) {
+
+    .skills__container {
+        padding: 0 40px;
+    }
+}
+
+@media (min-width: 445px) {
+
+    .skills {
+        padding: 80px 0;
+    }
+}
+
+.skills__body h2 {
+    font-size: 2.5rem;
+}
+
+.skills__body p {
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin-top: 20px;
+    line-height: 2.8rem;
+}
+
+.skills__skills {
+    margin: 40px auto 0;
+    width: fit-content;
+}
+
+.skill__card {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 320px;
+}
+
+.skill__card h2 {
+    font-size: 3.3rem;
+    color: var(--complementary-color);
+}
+
+.skill__card p {
+    font-size: 1.9rem;
+    padding-top: 20px;
+    font-weight: 600;
+}
+
+@media (min-width: 769px) {
+
+    .skills__body h2 {
+        font-size: 4.1rem;
+    }
+
+    .skills__skills {
+        margin: 40px auto 0;
+    }
+
+    .skill__card h2 {
+        font-size: 5.3rem;
+    }
+
+    .skill__card p {
+        font-size: 1.9rem;
+    }
+
+}
+
+@media (min-width: 1025px) {
+
+    .skills__container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        /* margin: 0 40px; */
+    }
+
+    .skills__body {
+        width: 65%;
+        max-width: 830px;
+    }
+
+    .skills__skills {
+        display: flex;
+        flex-wrap: wrap;
+        width: fit-content;
+        max-width: 430px;
+        height: 100%;
+        margin: 0;
+        justify-content: center;
+    }
+
+    .skill__card {
+        flex-basis: 50%;
+        max-width: 150px;
+        margin: 0 30px;
+        box-sizing: border-box;
+    }
 }
