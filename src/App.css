@@ -20,7 +20,7 @@ html {
 .header {
     height: 480px;
     display: flexbox;
-    background-image: url(../photos/portada.jpeg);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../photos/portada.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -403,4 +403,84 @@ html {
         margin: 0 30px;
         box-sizing: border-box;
     }
+}
+
+/* Languaje */
+
+.languaje {
+    padding: 60px 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../photos/languajes_background.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.languaje__container {
+    padding: 0 20px;
+    text-align: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    color: white;
+}
+
+.languaje__container h2 {
+    font-size: 2.57rem;
+    margin-bottom: 20px;
+}
+
+.languaje__languajes {
+    display: flex;
+    flex-direction: column;
+}
+
+.languaje__card {
+    padding: 20px 0;
+}
+
+.languaje__card h3 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--complementary-color);
+}
+
+.languaje__card p {
+    font-size: 1.38rem;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 469px) {
+
+    .languajes {
+        padding: 80px 0;
+    }
+
+    .languajes h2 {
+        margin-bottom: 50px;
+    }
+
+    .languaje__container {
+        padding: 0 40px;
+    }
+
+}
+
+@media (min-width: 769px) {
+
+    .languaje__container h2 {
+        font-size: 4.1rem;
+    }
+
+    .languaje__languajes {
+        display: flex;
+        flex-direction: unset;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .languaje__card {
+        padding: 20px;
+        width: 210px;
+    }
+
 }

@@ -119,6 +119,39 @@ function Skills() {
   )
 }
 
+function Languajes() {
+
+  const { t } = useTranslation(["main"])
+  return (
+    <>
+      <section className="languaje">
+        <div className="languaje__container">
+
+          <h2>{t('languaje__title')}</h2>
+
+          <div className="languaje__languajes">
+            <div className="languaje__card">
+              <h3>{t('languaje__card-languaje_1')}</h3>
+              <p>{t('languaje__card-level_1')}</p>
+            </div>
+            <div className="languaje__card">
+              <h3>{t('languaje__card-languaje_2')}</h3>
+              <p>{t('languaje__card-level_2')}</p>
+            </div>
+
+            {/* <div className="languaje__card">
+              <h3>{t('languaje__card-languaje_3')}</h3>
+              <p>{t('languaje__card-level_3')}</p>
+            </div> */}
+
+          </div>
+
+        </div>
+      </section>
+    </>
+  )
+}
+
 function App() {
   return (
     <>
@@ -126,6 +159,7 @@ function App() {
       <About />
       <Features />
       <Skills />
+      <Languajes />
     </>
   )
 }
