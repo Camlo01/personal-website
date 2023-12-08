@@ -21,12 +21,17 @@
     "feature__learn-more": "Learn more",
     "skills__body-title": "Programming skills",
     "skills__body-text": "Front end engineer believing in the power of web development. Experienced in all stages of advanced front end development. Focused on single-page application development, CSS/JS animations, semantics, accessibility, and progressive enhancement. However, I'm keen on exploring new languages and I always try to stay up-to-minute. Apart from these, I have other computer skills, such as I fluently use Adobe XD and Sketch for designing the websites before coding them. I also have basic knowledge in 3D Max Studio and Adobe After Effect and I use them as a hobby.",
-
     "languaje__title": "Languajes",
     "languaje__card-languaje_1": "Spanish",
     "languaje__card-level_1": "Native",
     "languaje__card-languaje_2": "English",
     "languaje__card-level_2": "Conversacional",
     "languaje__card-languaje_3": "Italian",
-    "languaje__card-level_3": "Básico"
+    "languaje__card-level_3": "Basic",
+    "experience__body-title": "Experience",
+    "experience__body-text": "From High School to Amazon. Get to know the timeline of my working experience from past to present.",
+    "experience__timeline_title_1": "Education",
+    "experience__timeline_body_1": "2016-2017 \n Estonian Entrepreneurship University of Applied Sciences \n Software Development and Entrepreneurship \n\n\n 2011- 2015 \n Michigan State University \n Web design and development bachelor's degree \n\n\n 2009-2011 \n  School \n  Technical High School \n",
+    "experience__timeline_title_2": "Work Experience",
+    "experience__timeline_body_2": "2020-present \n Senior front-end developer \n At Amazon headquarters campus in Seattle \n\n\n  2017-2019 \n Remote senior front-end developer \n At Google LLC based in America \n\n\n 2016-2017 \n Front-end developer \n At High Technologies LLC, based in Tallinn, Estonia \n\n\n 2014-2016 \n Junior front-end developer \n At IT Solutions company based in Michigan \n\n\n"
 }
