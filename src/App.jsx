@@ -205,6 +205,40 @@ function Portfolio() {
   )
 }
 
+function Contact() {
+
+  const { t } = useTranslation(["main"])
+  return (
+    <section className="contact">
+      <div className="contact__container">
+
+        <div className="contact__body">
+          <h2>{t('contact__body-title')}</h2>
+          <p>{t('contact__body-text_1')}</p>
+          <a href="tel: +57 322 6823615">{t('contact__body-text_2')}</a>
+          <a href="mailto: contact@camilobeltran.com">{t('contact__body-text_3')}</a>
+          <div className="contact__body-media">
+            <h3>{t('contact__body-subtitle')}</h3>
+            <div className="social_media">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+
+        <form action="">
+          <input type="text" placeholder={t('contact__form_name')} />
+          <input type="text" placeholder={t('contact__form_email')} />
+          <textarea name="" id="" placeholder={t('contact__form_message')}></textarea>
+          <button type="submit"> {t('contact__form_button')} </button>
+        </form>
+
+      </div>
+    </section>
+  )
+}
+
 function App() {
   return (
     <>
@@ -215,6 +249,7 @@ function App() {
       <Languajes />
       <Experience />
       <Portfolio />
+      <Contact />
     </>
   )
 }
