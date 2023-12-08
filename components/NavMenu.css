@@ -6,6 +6,7 @@
     position: fixed;
     transition: background-color .24s ease;
     box-shadow: none;
+    z-index: 1;
 }
 
 .navbar {
