@@ -20,5 +20,12 @@
     "feature__body_3": "My portfolio is my biggest  pride. Check my previous works and get to know my skills  better.",
     "feature__learn-more": "Ver más",
     "skills__body-title": "Programming skills",
-    "skills__body-text": "Front end engineer believing in the power of web development. Experienced in all stages of advanced front end development. Focused on single-page application development, CSS/JS animations, semantics, accessibility, and progressive enhancement. However, I'm keen on exploring new languages and I always try to stay up-to-minute. Apart from these, I have other computer skills, such as I fluently use Adobe XD and Sketch for designing the websites before coding them. I also have basic knowledge in 3D Max Studio and Adobe After Effect and I use them as a hobby."
+    "skills__body-text": "Front end engineer believing in the power of web development. Experienced in all stages of advanced front end development. Focused on single-page application development, CSS/JS animations, semantics, accessibility, and progressive enhancement. However, I'm keen on exploring new languages and I always try to stay up-to-minute. Apart from these, I have other computer skills, such as I fluently use Adobe XD and Sketch for designing the websites before coding them. I also have basic knowledge in 3D Max Studio and Adobe After Effect and I use them as a hobby.",
+    "languaje__title": "Idiomas",
+    "languaje__card-languaje_1": "Español",
+    "languaje__card-level_1": "Nativo",
+    "languaje__card-languaje_2": "Inglés",
+    "languaje__card-level_2": "Conversacional",
+    "languaje__card-languaje_3": "Italiano",
+    "languaje__card-level_3": "Básico"
 }
