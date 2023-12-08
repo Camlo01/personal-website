@@ -187,6 +187,23 @@ function Experience() {
   )
 }
 
+function Portfolio() {
+
+  const { t } = useTranslation(["main"])
+  return (
+    <>
+      <section className="portfolio">
+        <div className="portfolio__container">
+          <h2>Portfolio</h2>
+        </div>
+      </section>
+
+      <section className="portfolio__projects">
+        <p>{t('portfolio__text')}</p>
+      </section>
+    </>
+  )
+}
 
 function App() {
   return (
@@ -197,6 +214,7 @@ function App() {
       <Skills />
       <Languajes />
       <Experience />
+      <Portfolio />
     </>
   )
 }
