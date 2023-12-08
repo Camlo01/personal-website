@@ -292,8 +292,9 @@ html {
 
 .skills {
     padding: 60px 0;
-    width: 100%;
     background-color: var(--white);
+    max-width: 1320px;
+    margin: 0 auto;
 }
 
 .skills__container {
@@ -304,7 +305,7 @@ html {
     max-width: 1400px;
 }
 
-@media (min-width: 459px) {
+@media (min-width: 458px) {
 
     .skills__container {
         padding: 0 40px;
@@ -327,6 +328,7 @@ html {
     font-weight: 400;
     margin-top: 20px;
     line-height: 2.8rem;
+    max-width: 630px;
 }
 
 .skills__skills {
@@ -481,6 +483,181 @@ html {
     .languaje__card {
         padding: 20px;
         width: 210px;
+    }
+
+}
+
+/* Experience */
+
+.experience {
+    padding: 60px 0;
+    /* margin-bottom: 3000px; */
+}
+
+.experience__container {
+    padding: 0 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (min-width: 458px) {
+
+    .experience {
+        padding: 80px 0;
+    }
+
+    .experience__container {
+        padding: 0 40px;
+    }
+}
+
+.experience__container>h2 {
+    font-size: 2.55rem;
+    font-weight: 700;
+}
+
+.experience__container>p {
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin-top: 20px;
+    line-height: 2.5rem;
+}
+
+.experience__timeline {
+    padding-top: 50px;
+}
+
+.timeline__card img {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 40px;
+    border-radius: 18px;
+}
+
+.timeline__card h3 {
+    font-size: 1.97rem;
+    margin-bottom: 22px;
+}
+
+.timeline__card p {
+    white-space: pre-line;
+    font-size: 1.77rem;
+    line-height: 2.5rem;
+}
+
+.experience__timeline>div:first-child {
+    text-align: start;
+}
+
+.experience__timeline>div:last-child {
+    margin-top: 40px;
+    text-align: end;
+}
+
+.timeline__container .education h3::before {
+    content: "1";
+    position: absolute;
+
+    font-size: 1.5rem;
+    left: 10px;
+    font-weight: 700;
+    color: var(--complementary-color);
+}
+
+.timeline__container .work h3::before {
+    content: "2";
+    position: absolute;
+
+    font-size: 1.5rem;
+    left: 10px;
+    font-weight: 700;
+    color: var(--complementary-color);
+}
+
+@media (min-width:458px) {
+
+    .experience__container {
+        padding: 0 40px;
+    }
+
+    .timeline__container .education h3::before {
+        font-size: 1.6rem;
+        left: 18px;
+        z-index: -1;
+        background-color: var(--white);
+        padding: 5px;
+    }
+
+    .timeline__container .work h3::before {
+        font-size: 1.6rem;
+        left: 18px;
+        z-index: -1;
+        background-color: var(--white);
+        padding: 5px;
+    }
+
+}
+
+@media (min-width: 601px) {
+
+    .timeline__container {
+        padding: 0 40px;
+    }
+
+    .experience__timeline::before {
+        content: "";
+        position: absolute;
+        left: 27px;
+        width: 1.7px;
+        height: 210vw;
+        max-height: 2100px;
+        background-color: rgb(218, 218, 218);
+        border-radius: 5px;
+        z-index: -11;
+    }
+}
+
+@media (min-width: 769px) {
+
+    .experience__container>h2 {
+        font-size: 4.1rem;
+    }
+}
+
+@media (min-width: 1025px) {
+
+    .experience__timeline::before {
+        left: 50%;
+        height: 100%;
+    }
+
+    .timeline__container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .timeline__container>div {
+        width: 50%;
+    }
+
+    .experience__timeline>div:last-child {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .timeline__container>div {
+        margin: 0 45px;
+    }
+
+    .timeline__container .education h3::before {
+        font-size: 2rem;
+        left: calc(50% - 10px);
+    }
+
+    .timeline__container .work h3::before {
+        font-size: 2rem;
+        left: calc(50% - 10px);
     }
 
 }

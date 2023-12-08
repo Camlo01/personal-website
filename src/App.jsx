@@ -36,7 +36,7 @@ function About() {
         <div className="about__photo">
           <h2>{t('about__photo-h2')}</h2>
           <p>{t('about__photo-p')}</p>
-          <img src="" alt="" />
+          <img src={""} alt="" />
         </div>
       </div>
     </section>
@@ -152,6 +152,42 @@ function Languajes() {
   )
 }
 
+function Experience() {
+
+  const { t } = useTranslation(["main"])
+  return (
+    <section className="experience">
+      <div className="experience__container">
+
+        <h2>{t('experience__body-title')}</h2>
+        <p>{t('experience__body-text')}</p>
+
+        <div className="experience__timeline">
+          <div className="timeline__container">
+            <div className="timeline__card">
+              <img src={"../photos/timeline_1.jpeg"} alt="" />
+            </div>
+            <div className="timeline__card education">
+              <h3>{t('experience__timeline_title_1')}</h3>
+              <p>{t('experience__timeline_body_1')}</p>
+            </div>
+          </div>
+          <div className="timeline__container">
+            <div className="timeline__card">
+              <img src={"../photos/timeline_2.jpeg"} alt="" />
+            </div>
+            <div className="timeline__card work">
+              <h3>{t('experience__timeline_title_2')}</h3>
+              <p>{t('experience__timeline_body_2')}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section >
+  )
+}
+
+
 function App() {
   return (
     <>
@@ -160,6 +196,7 @@ function App() {
       <Features />
       <Skills />
       <Languajes />
+      <Experience />
     </>
   )
 }
