@@ -35,5 +35,14 @@
     "experience__timeline_title_2": "Work Experience",
     "experience__timeline_body_2": "2020-present \n Senior front-end developer \n At Amazon headquarters campus in Seattle \n\n\n  2017-2019 \n Remote senior front-end developer \n At Google LLC based in America \n\n\n 2016-2017 \n Front-end developer \n At High Technologies LLC, based in Tallinn, Estonia \n\n\n 2014-2016 \n Junior front-end developer \n At IT Solutions company based in Michigan \n\n\n",
     "portfolio__title": "Portafolio",
-    "portfolio__text": "Consulta más adelante..."
+    "portfolio__text": "Consulta más adelante...",
+    "contact__body-title": "Contactame",
+    "contact__body-text_1": "Llena este formulario y te responderé dentro de las siguientes 24 horas.",
+    "contact__body-text_2": "O llámame a este número +57 322 682-3615",
+    "contact__body-text_3": "contact@camilobeltran.com",
+    "contact__body-subtitle": "Find me on:",
+    "contact__form_name": "Nombre*",
+    "contact__form_email": "Correo*",
+    "contact__form_message": "Escribe tu mensaje acá...",
+    "contact__form_button": "Enviar"
 }
