@@ -4,7 +4,7 @@ import "./NavMenu.css"
 import { useState } from "react";
 
 function navbarStyles() {
-    const colorToApply = "rgba(21 21 22)"
+    const colorToApply = "#1C1C1D"
     const smoothShadow = "0px 2.1px 7.8px rgba(0, 0, 0, 0.015), 0px 3.8px 18.8px rgba(0, 0, 0, 0.054), 0px 5.6px 36.2px rgba(0, 0, 0, 0.151), 0px 9px 80px rgba(0, 0, 0, 0.2)";
     const navbar = document.getElementById('navbar-container');
     const position = window.scrollY
@@ -53,6 +53,7 @@ function NavMenu() {
                     <div className="btn-line"></div>
                 </div>
                 <nav className={`menu ${menuActive ? 'active' : ''}`}>
+                    <p onClick={toggleMenu} style={{ color: "white" }}>X</p>
                     <ul>
                         <li> <a href=""> {t('navMenuItem1')} </a></li>
                         <li> <a href=""> {t('navMenuItem2')} </a></li>
