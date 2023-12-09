@@ -26,7 +26,7 @@ function Header() {
 function About() {
   const { t } = useTranslation(["main"])
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div className="about__container">
         <div className="about__body">
           <h2>{t('about__body-h2')}</h2>
@@ -55,7 +55,7 @@ function Features() {
           <h2>{t('feature__title_1')}</h2>
           <p>{t('feature__body_1')}</p>
           <div className="feature__card-link">
-            <a>{t('feature__learn-more')}</a>
+            <a href="#skills">{t('feature__learn-more')}</a>
           </div>
         </div>
         <div className="features__card">
@@ -63,7 +63,7 @@ function Features() {
           <h2>{t('feature__title_2')}</h2>
           <p>{t('feature__body_2')}</p>
           <div className="feature__card-link">
-            <a>{t('feature__learn-more')}</a>
+            <a href="#experience">{t('feature__learn-more')}</a>
           </div>
         </div>
         <div className="features__card">
@@ -71,7 +71,7 @@ function Features() {
           <h2>{t('feature__title_3')}</h2>
           <p>{t('feature__body_3')}</p>
           <div className="feature__card-link">
-            <a>{t('feature__learn-more')}</a>
+            <a href="#portfolio">{t('feature__learn-more')}</a>
           </div>
         </div>
 
@@ -84,7 +84,7 @@ function Skills() {
 
   const { t } = useTranslation(["main"])
   return (
-    <section className="skills">
+    <section className="skills" id="skills">
       <div className="skills__container">
 
         <div className="skills__body">
@@ -156,7 +156,7 @@ function Experience() {
 
   const { t } = useTranslation(["main"])
   return (
-    <section className="experience">
+    <section className="experience" id="experience">
       <div className="experience__container">
 
         <h2>{t('experience__body-title')}</h2>
@@ -192,9 +192,9 @@ function Portfolio() {
   const { t } = useTranslation(["main"])
   return (
     <>
-      <section className="portfolio">
+      <section className="portfolio" id="portfolio">
         <div className="portfolio__container">
-          <h2>Portfolio</h2>
+          <h2>{t('portfolio__title')}</h2>
         </div>
       </section>
 
@@ -209,7 +209,7 @@ function Contact() {
 
   const { t } = useTranslation(["main"])
   return (
-    <section className="contact">
+    <section className="contact" id="contact">
       <div className="contact__container">
 
         <div className="contact__body">
@@ -246,11 +246,11 @@ function Footer() {
     <footer className="footer">
       <section className="footer__container">
         <div className="footer__items">
-          <a href="">{t('navMenuItem1')}</a>
-          <a href="">{t('navMenuItem2')}</a>
-          <a href="">{t('navMenuItem3')}</a>
-          <a href="">{t('navMenuItem4')}</a>
-          <a href="">{t('navMenuItem5')}</a>
+          <a href="#about">{t('navMenuItem1')}</a>
+          <a href="#skills">{t('navMenuItem2')}</a>
+          <a href="#experience">{t('navMenuItem3')}</a>
+          <a href="#portfolio">{t('navMenuItem4')}</a>
+          <a href="#contact">{t('navMenuItem5')}</a>
         </div>
       </section>
     </footer>

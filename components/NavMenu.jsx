@@ -55,11 +55,11 @@ function NavMenu() {
                 <nav className={`menu ${menuActive ? 'active' : ''}`}>
                     <p onClick={toggleMenu} style={{ color: "white" }}>X</p>
                     <ul>
-                        <li> <a href=""> {t('navMenuItem1')} </a></li>
-                        <li> <a href=""> {t('navMenuItem2')} </a></li>
-                        <li> <a href=""> {t('navMenuItem3')} </a></li>
-                        <li> <a href=""> {t('navMenuItem4')} </a></li>
-                        <li> <a href=""> {t('navMenuItem5')} </a></li>
+                        <li> <a href="#about"> {t('navMenuItem1')} </a></li>
+                        <li> <a href="#skills"> {t('navMenuItem2')} </a></li>
+                        <li> <a href="#experience"> {t('navMenuItem3')} </a></li>
+                        <li> <a href="#portfolio"> {t('navMenuItem4')} </a></li>
+                        <li> <a href="#contact"> {t('navMenuItem5')} </a></li>
                         <li onClick={changeLanguaje}>{t('navMenuItem6')}</li>
                     </ul>
                 </nav>

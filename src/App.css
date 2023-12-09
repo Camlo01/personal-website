@@ -15,6 +15,7 @@ html {
     font-size: 62.5%;
     font-family: "DM Sans", sans-serif;
     background-color: var(--white);
+    scroll-behavior: smooth;
 }
 
 .header {
@@ -103,6 +104,13 @@ html {
 
 .about {
     padding: 60px 0;
+    scroll-margin-top: 30px;
+}
+
+@media (min-width: 459px) {
+    .about {
+        padding: 80px 0;
+    }
 }
 
 .about__container {
@@ -251,6 +259,11 @@ html {
     margin-top: 20px;
 }
 
+.features__card a {
+    color: var(--complementary-color);
+    text-decoration: none;
+}
+
 .features__card .feature__card-link {
     font-size: 1.6rem;
     font-weight: 100;
@@ -295,6 +308,7 @@ html {
     background-color: var(--white);
     max-width: 1320px;
     margin: 0 auto;
+    scroll-margin-top: 30px;
 }
 
 .skills__container {
@@ -491,7 +505,7 @@ html {
 
 .experience {
     padding: 60px 0 0;
-    /* margin-bottom: 3000px; */
+    scroll-margin-top: 30px;
 }
 
 .experience__container {
@@ -663,6 +677,9 @@ html {
 }
 
 /* Portfolio */
+.portfolio {
+    scroll-margin-top: 30px;
+}
 
 .portfolio__container {
     padding: 0 20px;
@@ -712,6 +729,7 @@ html {
 .contact {
     padding: 60px 0;
     background-color: var(--white);
+    scroll-margin-top: 30px;
 }
 
 .contact__container {
