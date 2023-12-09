@@ -205,8 +205,14 @@ html {
         max-width: 370px;
     }
 
+    .about__container>div:first-child {
+        max-width: 450px;
+        
+    }
+
     .about__body h2 {
-        font-size: 5.3rem;
+        font-size: 5rem;
+        white-space: pre-line;
     }
 
     .about__photo h2 {
@@ -558,6 +564,7 @@ html {
     white-space: pre-line;
     font-size: 1.77rem;
     line-height: 2.5rem;
+    color: var(--text-color);
 }
 
 .experience__timeline>div:first-child {
@@ -625,7 +632,7 @@ html {
         left: 27px;
         width: 1.7px;
         height: 210vw;
-        max-height: 2100px;
+        max-height: 1680px;
         background-color: rgb(218, 218, 218);
         border-radius: 5px;
         z-index: -11;
