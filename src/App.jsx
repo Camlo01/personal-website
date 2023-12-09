@@ -239,6 +239,25 @@ function Contact() {
   )
 }
 
+function Footer() {
+
+  const { t } = useTranslation(["main"])
+  return (
+    <footer className="footer">
+      <section className="footer__container">
+        <div className="footer__items">
+          <a href="">{t('navMenuItem1')}</a>
+          <a href="">{t('navMenuItem2')}</a>
+          <a href="">{t('navMenuItem3')}</a>
+          <a href="">{t('navMenuItem4')}</a>
+          <a href="">{t('navMenuItem5')}</a>
+        </div>
+      </section>
+    </footer>
+  )
+
+}
+
 function App() {
   return (
     <>
@@ -250,6 +269,7 @@ function App() {
       <Experience />
       <Portfolio />
       <Contact />
+      <Footer />
     </>
   )
 }
