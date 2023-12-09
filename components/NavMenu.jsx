@@ -33,15 +33,20 @@ function NavMenu() {
     };
 
     const changeLanguaje = () => {
-        const actualLanguaje = i18n.language
-        switch (actualLanguaje) {
-            case "es":
-                i18next.changeLanguage("en")
-                break;
-            case "en":
-                i18next.changeLanguage("es")
-                break;
-        }
+        toggleMenu();
+
+        setTimeout(() => {
+            const actualLanguaje = i18n.language
+            switch (actualLanguaje) {
+                case "es":
+                    i18next.changeLanguage("en")
+                    break;
+                case "en":
+                    i18next.changeLanguage("es")
+                    break;
+            }
+        }, 300);
+
     }
 
     return (
@@ -55,11 +60,11 @@ function NavMenu() {
                 <nav className={`menu ${menuActive ? 'active' : ''}`}>
                     <p onClick={toggleMenu} style={{ color: "white" }}>X</p>
                     <ul>
-                        <li> <a href="#about"> {t('navMenuItem1')} </a></li>
-                        <li> <a href="#skills"> {t('navMenuItem2')} </a></li>
-                        <li> <a href="#experience"> {t('navMenuItem3')} </a></li>
-                        <li> <a href="#portfolio"> {t('navMenuItem4')} </a></li>
-                        <li> <a href="#contact"> {t('navMenuItem5')} </a></li>
+                        <li> <a href="#about" onClick={toggleMenu} > {t('navMenuItem1')} </a></li>
+                        <li> <a href="#skills" onClick={toggleMenu}> {t('navMenuItem2')} </a></li>
+                        <li> <a href="#experience" onClick={toggleMenu}> {t('navMenuItem3')} </a></li>
+                        <li> <a href="#portfolio" onClick={toggleMenu}> {t('navMenuItem4')} </a></li>
+                        <li> <a href="#contact" onClick={toggleMenu}> {t('navMenuItem5')} </a></li>
                         <li onClick={changeLanguaje}>{t('navMenuItem6')}</li>
                     </ul>
                 </nav>
