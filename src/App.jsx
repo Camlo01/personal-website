@@ -36,7 +36,7 @@ function About() {
         <div className="about__photo">
           <h2>{t('about__photo-h2')}</h2>
           <p>{t('about__photo-p')}</p>
-          <img src={""} alt="" />
+          <img src={"../photos/profile_1.jpeg"} alt="" />
         </div>
       </div>
     </section>
@@ -99,16 +99,16 @@ function Skills() {
             <p>Spring Boot</p>
           </div>
           <div className="skill__card">
+            <h2>Desing</h2>
+            <p>HTML5 Y CSS3</p>
+          </div>
+          <div className="skill__card">
+            <h2>Adobe</h2>
+            <p>Creative Cloud</p>
+          </div>
+          <div className="skill__card">
             <h2>JS</h2>
             <p>React JS</p>
-          </div>
-          <div className="skill__card">
-            <h2>Desing</h2>
-            <p>HTML5 y CSS3</p>
-          </div>
-          <div className="skill__card">
-            <h2>SQL</h2>
-            <p>Databases</p>
           </div>
 
         </div>
