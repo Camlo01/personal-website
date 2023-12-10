@@ -1,9 +1,19 @@
 import { useTranslation } from "react-i18next"
-import NavMenu from "../components/NavMenu"
+import NavMenu from "./components/NavMenu"
+import iconX from '../public/icons/icon_x.png'
+import iconLinkedIn from '../public/icons/icon_linkedin.png'
+import iconInstagram from '../public/icons/icon_instagram.png'
+import profilePicture from '../public/photos/profile_1.jpeg'
+import iconFire from '../public/icons/icon_fire.png'
+import iconStar from '../public/icons/icon_star.png'
+import iconBag from '../public/icons/icon_bag.png'
+import timeLinePic1 from '../public/photos/timeline_1.jpeg';
+import timeLinePic2 from '../public/photos/timeline_2.jpeg';
 
 import "./App.css"
 
 function Header() {
+
 
   const { t } = useTranslation(["main"])
 
@@ -17,17 +27,17 @@ function Header() {
       <div className="header__social">
         <div className="header__social-container">
           <a href="https://twitter.com/camlo1824?lang=es">
-            <img className="twitter" src={"../icons/icon_x.png"} alt="" />
+            <img className="twitter" src={iconX} alt="Twitter icon" />
           </a>
         </div>
         <div className="header__social-container">
           <a href="https://www.linkedin.com/in/camilo-beltran-c/">
-            <img className="linkedin" src={"../icons/icon_linkedin.png"} alt="" />
+            <img className="linkedin" src={iconLinkedIn} alt="Linkedin icon" />
           </a>
         </div>
         <div className="header__social-container">
           <a href="https://www.instagram.com/camil.mp4/">
-            <img href="" className="instagram" src={"../icons/icon_instagram.png"} alt="" />
+            <img href="" className="instagram" src={iconInstagram} alt="Instagram icon" />
           </a>
         </div>
       </div>
@@ -48,7 +58,7 @@ function About() {
         <div className="about__photo">
           <h2>{t('about__photo-h2')}</h2>
           <p>{t('about__photo-p')}</p>
-          <img src={"../photos/profile_1.jpeg"} alt="" />
+          <img src={profilePicture} alt="" />
         </div>
       </div>
     </section>
@@ -64,7 +74,7 @@ function Features() {
 
         <div className="features__card">
           <div>
-            <img src={"../icons/icon_fire.png"} alt="" />
+            <img src={iconFire} alt="Fire icon" />
           </div>
           <h2>{t('feature__title_1')}</h2>
           <p>{t('feature__body_1')}</p>
@@ -74,7 +84,7 @@ function Features() {
         </div>
         <div className="features__card">
           <div>
-            <img src={"../icons/icon_star.png"} alt="" />
+            <img src={iconStar} alt="Star icon" />
           </div>
           <h2>{t('feature__title_2')}</h2>
           <p>{t('feature__body_2')}</p>
@@ -84,7 +94,7 @@ function Features() {
         </div>
         <div className="features__card">
           <div>
-            <img src={"../icons/icon_bag.png"} alt="" />
+            <img src={iconBag} alt="Bag icon" />
           </div>
           <h2>{t('feature__title_3')}</h2>
           <p>{t('feature__body_3')}</p>
@@ -183,7 +193,7 @@ function Experience() {
         <div className="experience__timeline">
           <div className="timeline__container">
             <div className="timeline__card">
-              <img src={"../photos/timeline_1.jpeg"} alt="Autoretrado de Camilo Beltrán en el día de grabación de un video para el área de TI" />
+              <img src={timeLinePic1} alt="Autoretrado de Camilo Beltrán en el día de grabación de un video para el área de TI" />
             </div>
             <div className="timeline__card education">
               <h3>{t('experience__timeline_title_1')}</h3>
@@ -192,7 +202,7 @@ function Experience() {
           </div>
           <div className="timeline__container">
             <div className="timeline__card">
-              <img src={"../photos/timeline_2.jpeg"} alt="Fotografía Camilo Beltrán con el ingeniero Raul Blum durante mis prácticas en Gerdau Diaco" />
+              <img src={timeLinePic2} alt="Fotografía Camilo Beltrán con el ingeniero Raul Blum durante mis prácticas en Gerdau Diaco" />
             </div>
             <div className="timeline__card work">
               <h3>{t('experience__timeline_title_2')}</h3>
