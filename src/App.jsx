@@ -3,6 +3,7 @@ import NavMenu from "./components/NavMenu"
 import iconX from '/icons/icon_x.png'
 import iconLinkedIn from '/icons/icon_linkedin.png'
 import iconInstagram from '/icons/icon_instagram.png'
+import iconGithub from '/icons/icon_github.png'
 import profilePicture from '/photos/profile_1.jpeg'
 import iconFire from '/icons/icon_fire.png'
 import iconStar from '/icons/icon_star.png'
@@ -38,6 +39,11 @@ function Header() {
         <div className="header__social-container">
           <a href="https://www.instagram.com/camil.mp4/">
             <img href="" className="instagram" src={iconInstagram} alt="Instagram icon" />
+          </a>
+        </div>
+        <div className="header__social-container">
+          <a href="https://github.com/Camlo01">
+            <img href="" className="github" src={iconGithub} alt="Instagram icon" />
           </a>
         </div>
       </div>
@@ -248,6 +254,7 @@ function Contact() {
           <div className="contact__body-media">
             <h3>{t('contact__body-subtitle')}</h3>
             <div className="social_media">
+              <div></div>
               <div></div>
               <div></div>
               <div></div>

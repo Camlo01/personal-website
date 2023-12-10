@@ -81,6 +81,13 @@ html {
     width: 23px;
     margin-top: 8.6px;
     margin-left: 8.5px;
+}
+
+.header__social-container .github {
+    height: 33px;
+    width: 33px;
+    margin-left: 3.5px;
+    margin-top: 3px;
 
 }
 
@@ -109,6 +116,9 @@ html {
 
     .header__social {
         flex-direction: column;
+        position: absolute;
+        right: 5px;
+        top: 380px;
     }
 
     .header__body h1 {
