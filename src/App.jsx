@@ -15,9 +15,21 @@ function Header() {
         <p>{t('header__body-p')}</p>
       </div>
       <div className="header__social">
-        <div className="header__social-container"></div>
-        <div className="header__social-container"></div>
-        <div className="header__social-container"></div>
+        <div className="header__social-container">
+          <a href="https://twitter.com/camlo1824?lang=es">
+            <img className="twitter" src={"../icons/icon_x.png"} alt="" />
+          </a>
+        </div>
+        <div className="header__social-container">
+          <a href="https://www.linkedin.com/in/camilo-beltran-c/">
+            <img className="linkedin" src={"../icons/icon_linkedin.png"} alt="" />
+          </a>
+        </div>
+        <div className="header__social-container">
+          <a href="https://www.instagram.com/camil.mp4/">
+            <img href="" className="instagram" src={"../icons/icon_instagram.png"} alt="" />
+          </a>
+        </div>
       </div>
     </header>
   )
@@ -51,7 +63,9 @@ function Features() {
       <div className="features__container">
 
         <div className="features__card">
-          <img src="" alt="" />
+          <div>
+            <img src={"../icons/icon_fire.png"} alt="" />
+          </div>
           <h2>{t('feature__title_1')}</h2>
           <p>{t('feature__body_1')}</p>
           <div className="feature__card-link">
@@ -59,7 +73,9 @@ function Features() {
           </div>
         </div>
         <div className="features__card">
-          <img src="" alt="" />
+          <div>
+            <img src={"../icons/icon_star.png"} alt="" />
+          </div>
           <h2>{t('feature__title_2')}</h2>
           <p>{t('feature__body_2')}</p>
           <div className="feature__card-link">
@@ -67,7 +83,9 @@ function Features() {
           </div>
         </div>
         <div className="features__card">
-          <img src="" alt="" />
+          <div>
+            <img src={"../icons/icon_bag.png"} alt="" />
+          </div>
           <h2>{t('feature__title_3')}</h2>
           <p>{t('feature__body_3')}</p>
           <div className="feature__card-link">
@@ -165,7 +183,7 @@ function Experience() {
         <div className="experience__timeline">
           <div className="timeline__container">
             <div className="timeline__card">
-              <img src={"../photos/timeline_1.jpeg"} alt="" />
+              <img src={"../photos/timeline_1.jpeg"} alt="Autoretrado de Camilo Beltrán en el día de grabación de un video para el área de TI" />
             </div>
             <div className="timeline__card education">
               <h3>{t('experience__timeline_title_1')}</h3>
@@ -174,7 +192,7 @@ function Experience() {
           </div>
           <div className="timeline__container">
             <div className="timeline__card">
-              <img src={"../photos/timeline_2.jpeg"} alt="" />
+              <img src={"../photos/timeline_2.jpeg"} alt="Fotografía Camilo Beltrán con el ingeniero Raul Blum durante mis prácticas en Gerdau Diaco" />
             </div>
             <div className="timeline__card work">
               <h3>{t('experience__timeline_title_2')}</h3>

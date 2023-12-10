@@ -62,6 +62,28 @@ html {
     border: 1px solid white;
 }
 
+.header__social-container .twitter {
+    height: 45px;
+    width: 45px;
+    margin-top: -3.5px;
+    margin-left: -2.3px;
+}
+
+.header__social-container .linkedin {
+    height: 25px;
+    width: 25px;
+    margin-top: 6.8px;
+    margin-left: 8.5px;
+}
+
+.header__social-container .instagram {
+    height: 23px;
+    width: 23px;
+    margin-top: 8.6px;
+    margin-left: 8.5px;
+
+}
+
 @media (min-width: 550px) {
 
     .header {
@@ -138,6 +160,7 @@ html {
     font-size: 3.3rem;
     color: var(--complementary-color);
     font-weight: 700;
+    white-space: pre-line;
 }
 
 .about__body p {
@@ -156,6 +179,7 @@ html {
     justify-content: center;
     text-align: center;
     height: 100%;
+
 }
 
 .about__photo h2 {
@@ -176,6 +200,9 @@ html {
     border-radius: 50%;
     background-color: gray;
     margin-top: 30px;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 40px #bebebe,
+        -20px -20px 40px #ffffff;
 }
 
 @media (min-width: 458px) {
@@ -207,7 +234,7 @@ html {
 
     .about__container>div:first-child {
         max-width: 450px;
-        
+
     }
 
     .about__body h2 {
@@ -246,11 +273,21 @@ html {
     color: var(--pure-white);
 }
 
-.features__card img {
+.features__card>div:first-child {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: var(--complementary-color);
+    background: rgb(156, 87, 240);
+    background: -moz-linear-gradient(0deg, rgba(156, 87, 240, 1) 0%, rgba(176, 116, 250, 1) 43%, rgba(197, 150, 255, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(156, 87, 240, 1) 0%, rgba(176, 116, 250, 1) 43%, rgba(197, 150, 255, 1) 100%);
+    background: linear-gradient(0deg, rgba(156, 87, 240, 1) 0%, rgba(176, 116, 250, 1) 43%, rgba(197, 150, 255, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9c57f0", endColorstr="#c596ff", GradientType=1);
+    margin: 0 auto;
+}
+
+.features__card>div:first-child img {
+    width: 30px;
+    margin: 15px auto 0;
 }
 
 .features__card h2 {
@@ -815,6 +852,12 @@ html {
     border: 1px solid rgb(152, 152, 152);
 }
 
+.contact__container form input:focus,
+.contact__container form textarea:focus {
+    outline: none;
+    outline: 2px solid var(--complementary-color);
+}
+
 /* ESPACIO PARA AGREGAR ASTERISCOS */
 
 .contact__container form textarea {
@@ -822,11 +865,11 @@ html {
     height: 156px;
     padding: 20px;
     border-radius: 25px;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin-top: 20px;
     border: 1px solid rgb(152, 152, 152);
     resize: none;
-
+    font-family: 'Arial', Courier, monospace;
 }
 
 .contact__container form button {
@@ -865,6 +908,15 @@ html {
     background: -webkit-linear-gradient(0deg, rgba(197, 150, 255, 1) 0%, rgba(197, 150, 255, 1) 38%, rgba(205, 164, 255, 1) 63%, rgba(219, 189, 255, 1) 100%);
     background: linear-gradient(0deg, rgba(197, 150, 255, 1) 0%, rgba(197, 150, 255, 1) 38%, rgba(205, 164, 255, 1) 63%, rgba(219, 189, 255, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c596ff", endColorstr="#dbbdff", GradientType=1);
+}
+
+
+.contact__container form button:active {
+    background: rgb(166, 93, 255);
+    background: -moz-linear-gradient(0deg, rgba(166, 93, 255, 1) 0%, rgba(171, 104, 252, 1) 10%, rgba(157, 80, 252, 1) 40%, rgba(132, 35, 249, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(166, 93, 255, 1) 0%, rgba(171, 104, 252, 1) 10%, rgba(157, 80, 252, 1) 40%, rgba(132, 35, 249, 1) 100%);
+    background: linear-gradient(0deg, rgba(166, 93, 255, 1) 0%, rgba(171, 104, 252, 1) 10%, rgba(157, 80, 252, 1) 40%, rgba(132, 35, 249, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a65dff", endColorstr="#8423f9", GradientType=1);
 }
 
 @media (min-width: 501px) {
