@@ -13,7 +13,7 @@
 
 html {
     font-size: 62.5%;
-    font-family: "DM Sans", sans-serif;
+    font-family: "Lato", Arial, Helvetica, sans-serif;
     background-color: var(--white);
     scroll-behavior: smooth;
 }
@@ -21,7 +21,7 @@ html {
 .header {
     height: 480px;
     display: flexbox;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/photos/portada.jpeg);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/photos/portada.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,6 +35,8 @@ html {
 }
 
 .header__body h1 {
+    font-family: 'Roboto Slab';
+    font-weight: 700;
     font-size: 7rem;
     max-width: 340px;
     margin: 0 auto;
@@ -43,6 +45,8 @@ html {
 }
 
 .header__body p {
+    font-family: 'Roboto Slab';
+    font-weight: 400;
     font-size: 2.7rem;
     color: var(--complementary-color);
     padding-bottom: 20px;
@@ -167,9 +171,10 @@ html {
 }
 
 .about__body h2 {
+    font-family: 'Roboto Slab';
+    font-weight: 700;
     font-size: 3.3rem;
     color: var(--complementary-color);
-    font-weight: 700;
     white-space: pre-line;
 }
 
@@ -193,6 +198,8 @@ html {
 }
 
 .about__photo h2 {
+    font-family: 'Roboto Slab';
+    font-weight: 700;
     width: 100%;
     font-size: 2.3rem;
     padding-bottom: 18px;
@@ -301,13 +308,16 @@ html {
 }
 
 .features__card h2 {
+    font-family: 'Roboto Slab';
+    font-weight: 600;
     font-size: 2.2rem;
     margin-top: 20px;
 }
 
 .features__card p {
+    font-family: 'Lato';
+    font-weight: 400;
     font-size: 1.6rem;
-    font-weight: 200;
     line-height: 2.3rem;
     margin-top: 20px;
 }
@@ -387,6 +397,7 @@ html {
 }
 
 .skills__body h2 {
+    font-family: 'Roboto Slab';
     font-size: 2.5rem;
 }
 
@@ -404,6 +415,8 @@ html {
 }
 
 .skill__card {
+    font-family: 'Roboto Slab';
+    font-weight: 700;
     padding: 20px 0;
     display: flex;
     flex-direction: column;
@@ -493,6 +506,7 @@ html {
 }
 
 .languaje__container h2 {
+    font-family: 'Roboto Slab';
     font-size: 2.57rem;
     margin-bottom: 20px;
 }
@@ -507,13 +521,14 @@ html {
 }
 
 .languaje__card h3 {
+    font-family: 'Roboto Slab';
     font-size: 1.9rem;
-    font-weight: 700;
     margin-bottom: 20px;
     color: var(--complementary-color);
 }
 
 .languaje__card p {
+    font-weight: 400;
     font-size: 1.38rem;
     margin-bottom: 10px;
 }
@@ -579,9 +594,10 @@ html {
     }
 }
 
-.experience__container>h2 {
-    font-size: 2.55rem;
+.experience__container h2 {
+    font-family: 'Roboto Slab';
     font-weight: 700;
+    font-size: 2.55rem;
 }
 
 .experience__container>p {
@@ -603,11 +619,15 @@ html {
 }
 
 .timeline__card h3 {
+    font-family: 'Roboto Slab';
+    font-weight: 800;
     font-size: 1.97rem;
     margin-bottom: 22px;
 }
 
 .timeline__card p {
+    font-family: 'Lato';
+    font-weight: 400;
     white-space: pre-line;
     font-size: 1.77rem;
     line-height: 2.5rem;
@@ -741,10 +761,11 @@ html {
 }
 
 .portfolio__container h2 {
+    font-family: 'Roboto Slab';
+    font-weight: 700;
     padding: 60px 0;
     font-size: 2.57rem;
     text-align: center;
-    font-weight: 800;
 }
 
 @media (min-width: 458px) {
@@ -810,12 +831,15 @@ html {
 }
 
 .contact__body h2 {
+    font-family: 'Roboto Slab';
     font-size: 2.37rem;
     margin-bottom: 20px;
 }
 
 .contact__body p,
 .contact__body a {
+    font-family: 'Lato';
+    font-weight: 400;
     font-size: 1.38rem;
     line-height: 2.4rem;
     color: #1C1C1D;
@@ -879,10 +903,11 @@ html {
     margin-top: 20px;
     border: 1px solid rgb(152, 152, 152);
     resize: none;
-    font-family: 'Arial', Courier, monospace;
+    font-family: 'Lato';
 }
 
 .contact__container form button {
+    font-family: 'Lato';
     width: 110px;
     height: 50px;
     font-size: 1.4rem;
