@@ -1,14 +1,14 @@
 import { useTranslation } from "react-i18next"
 import NavMenu from "./components/NavMenu"
-import iconX from '../public/icons/icon_x.png'
-import iconLinkedIn from '../public/icons/icon_linkedin.png'
-import iconInstagram from '../public/icons/icon_instagram.png'
-import profilePicture from '../public/photos/profile_1.jpeg'
-import iconFire from '../public/icons/icon_fire.png'
-import iconStar from '../public/icons/icon_star.png'
-import iconBag from '../public/icons/icon_bag.png'
-import timeLinePic1 from '../public/photos/timeline_1.jpeg';
-import timeLinePic2 from '../public/photos/timeline_2.jpeg';
+import iconX from '/icons/icon_x.png'
+import iconLinkedIn from '/icons/icon_linkedin.png'
+import iconInstagram from '/icons/icon_instagram.png'
+import profilePicture from '/photos/profile_1.jpeg'
+import iconFire from '/icons/icon_fire.png'
+import iconStar from '/icons/icon_star.png'
+import iconBag from '/icons/icon_bag.png'
+import timeLinePic1 from '/photos/timeline_1.jpeg';
+import timeLinePic2 from '/photos/timeline_2.jpeg';
 
 import "./App.css"
 
