@@ -27,22 +27,22 @@ function Header() {
       </div>
       <div className="header__social">
         <div className="header__social-container">
-          <a href="https://twitter.com/camlo1824?lang=es">
+          <a target="_blank" href="https://twitter.com/camlo1824?lang=es">
             <img className="twitter" src={iconX} alt="Twitter icon" />
           </a>
         </div>
         <div className="header__social-container">
-          <a href="https://www.linkedin.com/in/camilo-beltran-c/">
+          <a target="_blank" href="https://www.linkedin.com/in/camilo-beltran-c/">
             <img className="linkedin" src={iconLinkedIn} alt="Linkedin icon" />
           </a>
         </div>
         <div className="header__social-container">
-          <a href="https://www.instagram.com/camil.mp4/">
+          <a target="_blank" href="https://www.instagram.com/camil.mp4/">
             <img href="" className="instagram" src={iconInstagram} alt="Instagram icon" />
           </a>
         </div>
         <div className="header__social-container">
-          <a href="https://github.com/Camlo01">
+          <a target="_blank" href="https://github.com/Camlo01">
             <img href="" className="github" src={iconGithub} alt="Instagram icon" />
           </a>
         </div>
