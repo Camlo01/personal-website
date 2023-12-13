@@ -68,9 +68,8 @@ html {
 
 .header__social-container .twitter {
     height: 45px;
-    width: 45px;
     margin-top: -3.5px;
-    margin-left: -2.3px;
+    margin-left: -7px;
 }
 
 .header__social-container .linkedin {
