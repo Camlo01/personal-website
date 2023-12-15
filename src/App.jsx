@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import NavMenu from "./components/NavMenu"
 import iconX from '/icons/icon_x.png'
@@ -241,6 +242,41 @@ function Portfolio() {
 
 function Contact() {
 
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      name: name,
+      email: email,
+      message: message
+    }
+
+    try {
+
+      fetch('https://camilobeltran.com/server/sendMail.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+        .then(response => response.json())
+        .then(data => console.log(data))
+
+    } catch (error) {
+      console.error('There was a problem !', error);
+    }
+
+    setName('')
+    setEmail('')
+    setMessage('')
+
+  };
+
   const { t } = useTranslation(["main"])
   return (
     <section className="contact" id="contact">
@@ -262,10 +298,10 @@ function Contact() {
           </div>
         </div>
 
-        <form action="">
-          <input type="text" placeholder={t('contact__form_name')} />
-          <input type="text" placeholder={t('contact__form_email')} />
-          <textarea name="" id="" placeholder={t('contact__form_message')}></textarea>
+        <form onSubmit={handleSubmit}>
+          <input name="name" type="text" placeholder={t('contact__form_name')} value={name} onChange={(e) => { setName(e.target.value) }} />
+          <input name="email" type="text" placeholder={t('contact__form_email')} value={email} onChange={(e) => { setEmail(e.target.value) }} />
+          <textarea name="message" placeholder={t('contact__form_message')} value={message} onChange={(e) => { setMessage(e.target.value) }}></textarea>
           <button type="submit"> {t('contact__form_button')} </button>
         </form>
 
