@@ -10,7 +10,7 @@ i18n
       loadPath: '/locales/{{lng}}/{{ns}}.json', //path to translate files
     },
     fallbackLng: "es",
-    ns: ['main'], //name of each translate file
+    ns: ['main', 'alertMessages'], //name of each translate file
     defaultNS: 'common',
   });
 
