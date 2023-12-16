@@ -10,10 +10,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     ];
 
     // Configure the SMTP Server
-    ini_set("SMTP", $host);
-    ini_set("smtp_port", $port);
-    ini_set("username", $username);
-    ini_set("password", $password);
+    ini_set("SMTP", $config['host']);
+    ini_set("smtp_port", $config['port']);
+    ini_set("username", $config['username']);
+    ini_set("password", $config['password']);
 
     // set the values into variables
     $data = json_decode(file_get_contents("php://input"), true);
@@ -22,14 +22,23 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = $data['email'];
     $message = $data['message'];
 
-    // Configuración del correo electrónico
+    // Configure mail content
     $to = "contact@camilobeltran.com";
     $subject = "Contact Form -> New Message!";
     $messageBody = "Nombre: $name\nCorreo electrónico: $email\nMensaje: $message";
 
-    $headers = "From: form-no-reply@camilobeltran.com\r\n";
+
+    // Configure headers
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/plain; charset=utf-8\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+
+    // Encabezados de autenticación
+    $headers .= "Return-Path: <$email>\r\n";
+    $headers .= "X-Sender: $email\r\n";
+    $headers .= "X-Mailer: PHP\r\n";
+    $headers .= "X-Priority: 1\r\n";
 
     if (mail($to, $subject, $messageBody, $headers)) {
         $response = array("success" => true, "message" => "Correo enviado correctamente");
