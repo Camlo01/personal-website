@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import NavMenu from "./components/NavMenu"
+import FormAlert from "./components/formAlert"
+
 import iconX from '/icons/icon_x.png'
 import iconLinkedIn from '/icons/icon_linkedin.png'
 import iconInstagram from '/icons/icon_instagram.png'
@@ -246,7 +248,22 @@ function Contact() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
 
+  const [showFormAlert, setShowFormAlert] = useState(false);
+  const [responsePost, setResponsePost] = useState({});
+
+  const [formDisabled, setFormDisabled] = useState(false)
+
+  const [nameWhoSendEmail, setNameWhoSendEmail] = useState('')
+
+  const { t } = useTranslation(["main", "alertMessages"]);
+
+  function isValidEmail(email) {
+    return /^(?=.{1,40}$)[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
   const handleSubmit = async (e) => {
+
+
     e.preventDefault();
 
     const formData = {
@@ -257,38 +274,78 @@ function Contact() {
 
     try {
 
-      fetch('https://camilobeltran.com/server/sendMail.php', {
+
+      if (formData.name == '' || formData.email == '' || formData.message == '') {
+        alert(t('form_alert_case_empty-fields', { ns: 'alertMessages' }))
+        return null
+      }
+
+      if (!isValidEmail(formData.email)) {
+        alert(t('form_alert_case_no-valid-email', { ns: 'alertMessages' }))
+        return null
+      }
+
+      if (formData.message.length > 250) {
+        alert(t('form_alert_case-msg-exceeds-limit', { ns: 'alertMessages' }))
+        return null
+      }
+
+      // For testing purposes
+      // const simulateSuccessfulResponse = () => {
+      //   return Promise.resolve({
+      //     success: true,
+      //     message: 'Correo enviado correctamente'
+      //   });
+      // };
+      // const response = await simulateSuccessfulResponse()
+
+      // For production
+      const response = await fetch('https://camilobeltran.com/server/sendMail.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(formData)
-      })
-        .then(response => response.json())
-        .then(data => console.log(data))
+      }).then(response => response.json())
+
+      if (response?.success) {
+        setResponsePost(response) //set the response
+        setShowFormAlert(true) // set status for show the message  
+
+        setNameWhoSendEmail(name);
+
+        //define values for form
+        setFormDisabled(true)
+        setName('')
+        setEmail('')
+        setMessage('')
+      }
 
     } catch (error) {
       console.error('There was a problem !', error);
+      setResponsePost(undefined) //set the response
+      setShowFormAlert(true) // set status for show the message
+
+      //Reset 
+      setTimeout(() => {
+        setShowFormAlert(false)
+      }, 7000);
     }
 
-    setName('')
-    setEmail('')
-    setMessage('')
 
   };
 
-  const { t } = useTranslation(["main"])
   return (
     <section className="contact" id="contact">
+      {showFormAlert && <FormAlert props={{ responseData: responsePost, setShowFormAlert, name: nameWhoSendEmail }} />}
       <div className="contact__container">
-
         <div className="contact__body">
-          <h2>{t('contact__body-title')}</h2>
-          <p>{t('contact__body-text_1')}</p>
-          <a href="tel: +57 322 6823615">{t('contact__body-text_2')}</a>
-          <a href="mailto: contact@camilobeltran.com">{t('contact__body-text_3')}</a>
+          <h2>{t('contact__body-title', { ns: 'main' })}</h2>
+          <p>{t('contact__body-text_1', { ns: 'main' })}</p>
+          <a href="tel: +57 322 6823615">{t('contact__body-text_2', { ns: 'main' })}</a>
+          <a href="mailto: contact@camilobeltran.com">{t('contact__body-text_3', { ns: 'main' })}</a>
           <div className="contact__body-media">
-            <h3>{t('contact__body-subtitle')}</h3>
+            <h3>{t('contact__body-subtitle', { ns: 'main' })}</h3>
             <div className="social_media">
               <div></div>
               <div></div>
@@ -297,12 +354,11 @@ function Contact() {
             </div>
           </div>
         </div>
-
-        <form onSubmit={handleSubmit}>
-          <input name="name" type="text" placeholder={t('contact__form_name')} value={name} onChange={(e) => { setName(e.target.value) }} />
-          <input name="email" type="text" placeholder={t('contact__form_email')} value={email} onChange={(e) => { setEmail(e.target.value) }} />
-          <textarea name="message" placeholder={t('contact__form_message')} value={message} onChange={(e) => { setMessage(e.target.value) }}></textarea>
-          <button type="submit"> {t('contact__form_button')} </button>
+        <form onSubmit={handleSubmit} >
+          <input name="name" type="text" placeholder={t('contact__form_name', { ns: 'main' })} value={name} onChange={(e) => { setName(e.target.value) }} disabled={formDisabled} />
+          <input name="email" type="text" placeholder={t('contact__form_email', { ns: 'main' })} value={email} onChange={(e) => { setEmail(e.target.value) }} disabled={formDisabled} />
+          <textarea name="message" placeholder={t('contact__form_message', { ns: 'main' })} value={message} onChange={(e) => { setMessage(e.target.value) }} disabled={formDisabled}></textarea>
+          <button type="submit" disabled={formDisabled}> {t('contact__form_button', { ns: 'main' })} </button>
         </form>
 
       </div>
