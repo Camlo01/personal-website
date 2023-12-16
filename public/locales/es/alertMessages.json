@@ -1,0 +1,8 @@
+{
+    "server_message": "Mensaje del servidor:",
+    "server_message-ok": "El mensaje se envió exitosamente {{name}}, espera una respuesta muy pronto!",
+    "server_message-bad": "Al parecer hubo un problema con el servidor, intenta nuevamente más tarde.",
+    "form_alert_case_empty-fields": "No pueden haber campos vacíos",
+    "form_alert_case_no-valid-email": "Ingresa un email válido",
+    "form_alert_case-msg-exceeds-limit": "El mensaje es mayor a 250 carácteres"
+}
