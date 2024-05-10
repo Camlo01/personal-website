@@ -11,8 +11,12 @@ import profilePicture from '/photos/profile_1.jpeg'
 import iconFire from '/icons/icon_fire.png'
 import iconStar from '/icons/icon_star.png'
 import iconBag from '/icons/icon_bag.png'
-import timeLinePic1 from '/photos/timeline_1.jpeg';
-import timeLinePic2 from '/photos/timeline_2.jpeg';
+import timeLinePic1 from '/photos/timeline_1.jpeg'
+import timeLinePic2 from '/photos/timeline_2.jpeg'
+import iconGithubSVG from '/icons/svg/icon_github.svg'
+import iconInstagramSVG from '/icons/svg/icon_instagram.svg'
+import iconLinkedinSVG from '/icons/svg/icon_linkedin.svg'
+import iconXSVG from '/icons/svg/icon_x.svg'
 
 import "./App.css"
 
@@ -30,7 +34,7 @@ function Header() {
       </div>
       <div className="header__social">
         <div className="header__social-container">
-          <a target="_blank" href="https://twitter.com/camlo1824?lang=es">
+          <a target="_blank" href="https://x.com/camlo1824?lang=es">
             <img className="twitter" src={iconX} alt="Twitter icon" />
           </a>
         </div>
@@ -347,10 +351,18 @@ function Contact() {
           <div className="contact__body-media">
             <h3>{t('contact__body-subtitle', { ns: 'main' })}</h3>
             <div className="social_media">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
+              <a target="_blank" href="https://github.com/Camlo01" className="github">
+                <img src={iconGithubSVG} alt="Github Icon" />
+              </a>
+              <a target="_blank" href="https://www.instagram.com/camil.mp4/" className="instagram">
+                <img src={iconInstagramSVG} alt="" />
+              </a>
+              <a target="_blank" href="https://www.linkedin.com/in/camilo-beltran-c/" className="linkedin">
+                <img src={iconLinkedinSVG} alt="" />
+              </a>
+              <a target="_blank" href="https://x.com/camlo1824?lang=es" className="x">
+                <img src={iconXSVG} alt="" />
+              </a>
             </div>
           </div>
         </div>

@@ -862,11 +862,10 @@ html {
     justify-content: center;
 }
 
-.social_media>div {
-    height: 18px;
-    width: 18px;
+.social_media a {
+    width: 22px;
+    height: 22px;
     margin: 10px;
-    background-color: rgba(33, 94, 41, 0.24);
 }
 
 .contact__container form {
