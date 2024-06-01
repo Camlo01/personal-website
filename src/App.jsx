@@ -304,13 +304,20 @@ function Contact() {
       // const response = await simulateSuccessfulResponse()
 
       // For production
+      // const response = await fetch('/Applications/XAMPP/xamppfiles/htdocs/sendMail.php', {
       const response = await fetch('https://camilobeltran.com/server/sendMail.php', {
         method: 'POST',
         body: JSON.stringify(formData),
         headers: {
           'Content-Type': 'application/json'
         }
-      }).then(response => JSON.parse(response));
+      }).then(response => {
+        try {
+          result = JSON.parse(response);
+        } catch {
+          return response.json()
+        }
+      })
 
       if (response?.success) {
         setResponsePost(response) //set the response
