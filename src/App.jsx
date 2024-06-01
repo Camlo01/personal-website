@@ -71,7 +71,7 @@ function About() {
         <div className="about__photo">
           <h2>{t('about__photo-h2')}</h2>
           <p>{t('about__photo-p')}</p>
-          <img src={profilePicture} alt="" />
+          <img src={profilePicture} alt="Photo Camilo" />
         </div>
       </div>
     </section>
@@ -306,11 +306,11 @@ function Contact() {
       // For production
       const response = await fetch('https://camilobeltran.com/server/sendMail.php', {
         method: 'POST',
+        body: JSON.stringify(formData),
         headers: {
           'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      }).then(response => response.json())
+        }
+      }).then(response => JSON.parse(response));
 
       if (response?.success) {
         setResponsePost(response) //set the response
@@ -355,13 +355,13 @@ function Contact() {
                 <img src={iconGithubSVG} alt="Github Icon" />
               </a>
               <a target="_blank" href="https://www.instagram.com/camil.mp4/" className="instagram">
-                <img src={iconInstagramSVG} alt="" />
+                <img src={iconInstagramSVG} alt="Instagram Icon" />
               </a>
               <a target="_blank" href="https://www.linkedin.com/in/camilo-beltran-c/" className="linkedin">
-                <img src={iconLinkedinSVG} alt="" />
+                <img src={iconLinkedinSVG} alt="Linkedin Icon" />
               </a>
               <a target="_blank" href="https://x.com/camlo1824?lang=es" className="x">
-                <img src={iconXSVG} alt="" />
+                <img src={iconXSVG} alt="X Icon" />
               </a>
             </div>
           </div>
@@ -414,3 +414,4 @@ function App() {
 }
 
 export default App
+
