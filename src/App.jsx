@@ -267,7 +267,6 @@ function Contact() {
 
   const handleSubmit = async (e) => {
 
-
     e.preventDefault();
 
     const formData = {
@@ -278,20 +277,20 @@ function Contact() {
 
     try {
 
-
       if (formData.name == '' || formData.email == '' || formData.message == '') {
         alert(t('form_alert_case_empty-fields', { ns: 'alertMessages' }))
         return null
       }
-
-      if (!isValidEmail(formData.email)) {
+      else if (!isValidEmail(formData.email)) {
         alert(t('form_alert_case_no-valid-email', { ns: 'alertMessages' }))
         return null
       }
-
-      if (formData.message.length > 250) {
+      else if (formData.message.length > 250) {
         alert(t('form_alert_case-msg-exceeds-limit', { ns: 'alertMessages' }))
         return null
+      }
+      else {
+        setFormDisabled(true)
       }
 
       // For testing purposes
@@ -340,7 +339,7 @@ function Contact() {
       //Reset 
       setTimeout(() => {
         setShowFormAlert(false)
-      }, 7000);
+      }, 6000);
     }
 
 

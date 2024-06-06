@@ -952,6 +952,13 @@ html {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a65dff", endColorstr="#8423f9", GradientType=1);
 }
 
+.contact__container form button:disabled {
+    background: rgb(133, 74, 204);
+    background: -moz-linear-gradient(0deg, rgba(133, 74, 204, 1) 0%, rgba(137, 83, 202, 1) 10%, rgba(126, 63, 202, 1) 40%, rgba(106, 29, 196, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(133, 74, 204, 1) 0%, rgba(137, 83, 202, 1) 10%, rgba(126, 63, 202, 1) 40%, rgba(106, 29, 196, 1) 100%);
+    background: linear-gradient(0deg, rgba(133, 74, 204, 1) 0%, rgba(137, 83, 202, 1) 10%, rgba(126, 63, 202, 1) 40%, rgba(106, 29, 196, 1) 100%);
+}
+
 @media (min-width: 501px) {
 
     .contact__container form {
