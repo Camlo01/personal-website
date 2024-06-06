@@ -1,5 +1,19 @@
 <?php
 
+$allowed_origins = [
+    'https://camilobeltran.com',
+    'https://www.camilobeltran.com',
+    'http://camilobeltran.com',
+    'http://www.camilobeltran.com',
+];
+
+if (isset($_SERVER['HTTP_ORIGIN']) && in_array($_SERVER['HTTP_ORIGIN'], $allowed_origins)) {
+    header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
+}
+
+header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
+
 use PHPMailer\PHPMailer\PHPMailer;
 
 require 'vendor/autoload.php';
