@@ -1,7 +1,7 @@
 import i18next from "i18next"
 import { useTranslation } from "react-i18next"
 import "./NavMenu.css"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function navbarStyles() {
     const colorToApply = "#1C1C1D"
@@ -51,6 +51,19 @@ function NavMenu() {
         }, 300);
 
     }
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 768) {
+                setMenuActive(false);
+                toggleMenu();
+            }
+        };
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     return (
         <div className="navbar-container" id="navbar-container">
